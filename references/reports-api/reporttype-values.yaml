@@ -4,6 +4,14 @@ Brand Analytics reports:
     file_format: json
   GET_BRAND_ANALYTICS_SEARCH_TERMS_REPORT:
     file_format: json
+  GET_BRAND_ANALYTICS_SEARCH_TERMS_REPORT:
+    file_format: json
+  GET_BRAND_ANALYTICS_REPEAT_PURCHASE_REPORT:
+    file_format: json
+  GET_BRAND_ANALYTICS_ALTERNATE_PURCHASE_REPORT:
+    file_format: json
+  GET_BRAND_ANALYTICS_ITEM_COMPARISON_REPORT:
+    file_format: json
 Vendor retail analytics reports:
 -
   GET_VENDOR_SALES_DIAGNOSTIC_REPORT:
