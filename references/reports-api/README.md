@@ -35,5 +35,15 @@ There you get stats of `reportype-values.json`
     reportType count: 101
     file_format count: [('tsv', 71), ('xml', 14), ('json', 6), ('csv', 5), ('unknown', 2), ('xlsx', 2), ('pdf', 1)]
     reports with unknown file_format:  ['GET_CONVERGED_FLAT_FILE_PENDING_ORDERS_DATA', 'GET_V2_SELLER_PERFORMANCE_REPORT']
+    reports with actual different format: both GET_B2B_PRODUCT_OPPORTUNITIES* reports are in JSON format
 
 and check the results agains the results of `./reporttype-stats.sh`
+
+## TODO
+
+Parse:
+
+* Integration type: "Can be requested by sellers and vendors.", "For Seller Central sellers only.", "Marketplace and Seller Central sellers.".
+* Requires:
+  * "Requests must include the FIELD in the reportsOptions."
+  * "Available to selling partners who have the Brand Analytics Selling Partner API role and who are registered in Amazon's Brand Registry."

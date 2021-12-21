@@ -1,0 +1,1030 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "accountStatuses": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "marketplaceId": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "marketplaceId",
+                    "status"
+                ]
+            }
+        },
+        "performanceMetrics": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "lateShipmentRate": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "number"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "orderCount": {
+                                "type": "integer"
+                            },
+                            "lateShipmentCount": {
+                                "type": "integer"
+                            },
+                            "rate": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "lateShipmentCount",
+                            "orderCount",
+                            "rate",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "invoiceDefectRate": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "number"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "invoiceDefect": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "count": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "count",
+                                    "status"
+                                ]
+                            },
+                            "missingInvoice": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "count": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "count",
+                                    "status"
+                                ]
+                            },
+                            "lateInvoice": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "count": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "count",
+                                    "status"
+                                ]
+                            },
+                            "orderCount": {
+                                "type": "integer"
+                            },
+                            "rate": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "invoiceDefect",
+                            "lateInvoice",
+                            "missingInvoice",
+                            "orderCount",
+                            "rate",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "orderDefectRate": {
+                        "type": "object",
+                        "properties": {
+                            "afn": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateRange": {
+                                        "type": "object",
+                                        "properties": {
+                                            "reportingDateFrom": {
+                                                "type": "string"
+                                            },
+                                            "reportingDateTo": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "reportingDateFrom",
+                                            "reportingDateTo"
+                                        ]
+                                    },
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "targetValue": {
+                                        "type": "number"
+                                    },
+                                    "targetCondition": {
+                                        "type": "string"
+                                    },
+                                    "orderWithDefects": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "claims": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "chargebacks": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "negativeFeedback": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "orderCount": {
+                                        "type": "integer"
+                                    },
+                                    "rate": {
+                                        "type": "integer"
+                                    },
+                                    "fulfillmentType": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "chargebacks",
+                                    "claims",
+                                    "fulfillmentType",
+                                    "negativeFeedback",
+                                    "orderCount",
+                                    "orderWithDefects",
+                                    "rate",
+                                    "reportingDateRange",
+                                    "status",
+                                    "targetCondition",
+                                    "targetValue"
+                                ]
+                            },
+                            "mfn": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateRange": {
+                                        "type": "object",
+                                        "properties": {
+                                            "reportingDateFrom": {
+                                                "type": "string"
+                                            },
+                                            "reportingDateTo": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "reportingDateFrom",
+                                            "reportingDateTo"
+                                        ]
+                                    },
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "targetValue": {
+                                        "type": "number"
+                                    },
+                                    "targetCondition": {
+                                        "type": "string"
+                                    },
+                                    "orderWithDefects": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "claims": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "chargebacks": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "negativeFeedback": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "count",
+                                            "status"
+                                        ]
+                                    },
+                                    "orderCount": {
+                                        "type": "integer"
+                                    },
+                                    "rate": {
+                                        "type": "number"
+                                    },
+                                    "fulfillmentType": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "chargebacks",
+                                    "claims",
+                                    "fulfillmentType",
+                                    "negativeFeedback",
+                                    "orderCount",
+                                    "orderWithDefects",
+                                    "rate",
+                                    "reportingDateRange",
+                                    "status",
+                                    "targetCondition",
+                                    "targetValue"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "afn",
+                            "mfn"
+                        ]
+                    },
+                    "onTimeDeliveryRate": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "number"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "shipmentCountWithValidTracking": {
+                                "type": "integer"
+                            },
+                            "onTimeDeliveryCount": {
+                                "type": "integer"
+                            },
+                            "rate": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "onTimeDeliveryCount",
+                            "rate",
+                            "reportingDateRange",
+                            "shipmentCountWithValidTracking",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "validTrackingRate": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "number"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "shipmentCount": {
+                                "type": "integer"
+                            },
+                            "validTrackingCount": {
+                                "type": "integer"
+                            },
+                            "rate": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "rate",
+                            "reportingDateRange",
+                            "shipmentCount",
+                            "status",
+                            "targetCondition",
+                            "targetValue",
+                            "validTrackingCount"
+                        ]
+                    },
+                    "preFulfillmentCancellationRate": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "number"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "orderCount": {
+                                "type": "integer"
+                            },
+                            "cancellationCount": {
+                                "type": "integer"
+                            },
+                            "rate": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "cancellationCount",
+                            "orderCount",
+                            "rate",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "warningStates": {
+                        "type": "array"
+                    },
+                    "accountHealthRating": {
+                        "type": "object",
+                        "properties": {
+                            "ahrStatus": {
+                                "type": "string"
+                            },
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "ahrStatus",
+                            "reportingDateRange"
+                        ]
+                    },
+                    "listingPolicyViolations": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "productAuthenticityCustomerComplaints": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "productConditionCustomerComplaints": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "productSafetyCustomerComplaints": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "receivedIntellectualPropertyComplaints": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "restrictedProductPolicyViolations": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "suspectedIntellectualPropertyViolations": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "foodAndProductSafetyIssues": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "customerProductReviewsPolicyViolations": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "otherPolicyViolations": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "documentRequests": {
+                        "type": "object",
+                        "properties": {
+                            "reportingDateRange": {
+                                "type": "object",
+                                "properties": {
+                                    "reportingDateFrom": {
+                                        "type": "string"
+                                    },
+                                    "reportingDateTo": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "reportingDateFrom",
+                                    "reportingDateTo"
+                                ]
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "targetValue": {
+                                "type": "integer"
+                            },
+                            "targetCondition": {
+                                "type": "string"
+                            },
+                            "defectsCount": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "defectsCount",
+                            "reportingDateRange",
+                            "status",
+                            "targetCondition",
+                            "targetValue"
+                        ]
+                    },
+                    "marketplaceId": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "accountHealthRating",
+                    "customerProductReviewsPolicyViolations",
+                    "documentRequests",
+                    "foodAndProductSafetyIssues",
+                    "invoiceDefectRate",
+                    "lateShipmentRate",
+                    "listingPolicyViolations",
+                    "marketplaceId",
+                    "onTimeDeliveryRate",
+                    "orderDefectRate",
+                    "otherPolicyViolations",
+                    "preFulfillmentCancellationRate",
+                    "productAuthenticityCustomerComplaints",
+                    "productConditionCustomerComplaints",
+                    "productSafetyCustomerComplaints",
+                    "receivedIntellectualPropertyComplaints",
+                    "restrictedProductPolicyViolations",
+                    "suspectedIntellectualPropertyViolations",
+                    "validTrackingRate",
+                    "warningStates"
+                ]
+            }
+        }
+    },
+    "required": [
+        "accountStatuses",
+        "performanceMetrics"
+    ]
+}

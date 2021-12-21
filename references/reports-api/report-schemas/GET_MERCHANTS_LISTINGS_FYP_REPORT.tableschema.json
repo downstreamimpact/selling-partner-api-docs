@@ -1,0 +1,47 @@
+{
+    "fields": [
+        {
+            "name": "Status",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Reason",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "SKU",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "ASIN",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Product name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Condition",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Status Change Date",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Issue Description",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "name": "SKU",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Provide prepaid label",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

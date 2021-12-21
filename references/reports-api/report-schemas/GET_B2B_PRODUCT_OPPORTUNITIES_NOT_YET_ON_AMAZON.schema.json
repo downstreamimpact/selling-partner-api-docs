@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "brand": {
+                "type": "string"
+            },
+            "category": {
+                "type": "string"
+            },
+            "partNumber": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "ean": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "upc": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "modelNumber": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "isbn": {
+                "type": "null"
+            },
+            "itemName": {
+                "type": "string"
+            },
+            "initialB2bBuyerIndustry": {
+                "type": "null"
+            },
+            "initialB2bBuyerRequestedDate": {
+                "type": "null"
+            }
+        },
+        "required": [
+            "brand",
+            "category",
+            "ean",
+            "initialB2bBuyerIndustry",
+            "initialB2bBuyerRequestedDate",
+            "isbn",
+            "itemName",
+            "modelNumber",
+            "partNumber",
+            "upc"
+        ]
+    }
+}

@@ -1,0 +1,137 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "brand": {
+                "type": "string"
+            },
+            "category": {
+                "type": "string"
+            },
+            "partNumber": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "ean": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "upc": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "modelNumber": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "isbn": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "asin": {
+                "type": "string"
+            },
+            "link": {
+                "type": "string"
+            },
+            "itemName": {
+                "type": "string"
+            },
+            "subCategory": {
+                "type": "string"
+            },
+            "lowestPriceInTheLastWeek": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "number"
+                    },
+                    "currencyCode": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "amount",
+                    "currencyCode"
+                ]
+            },
+            "hasFBAOffer": {
+                "type": "boolean"
+            },
+            "offerCount": {
+                "type": "integer"
+            },
+            "reviewCount": {
+                "type": "integer"
+            },
+            "b2bSalesRank": {
+                "type": "integer"
+            },
+            "b2bSalesRankGrowth": {
+                "type": "string"
+            },
+            "pageViews": {
+                "type": "string"
+            },
+            "productPerformance": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            },
+            "isProductOnAmazon": {
+                "type": "boolean"
+            },
+            "hasAmazonOffer": {
+                "type": "boolean"
+            },
+            "hasOfferWithVatInvoiceGeneration": {
+                "type": "boolean"
+            },
+            "isBrandYouOffer": {
+                "type": "boolean"
+            },
+            "isCategoryYouOffer": {
+                "type": "boolean"
+            }
+        },
+        "required": [
+            "asin",
+            "b2bSalesRank",
+            "b2bSalesRankGrowth",
+            "brand",
+            "category",
+            "ean",
+            "hasAmazonOffer",
+            "hasFBAOffer",
+            "hasOfferWithVatInvoiceGeneration",
+            "isBrandYouOffer",
+            "isCategoryYouOffer",
+            "isProductOnAmazon",
+            "isbn",
+            "itemName",
+            "link",
+            "lowestPriceInTheLastWeek",
+            "modelNumber",
+            "offerCount",
+            "pageViews",
+            "partNumber",
+            "productPerformance",
+            "reviewCount",
+            "subCategory",
+            "upc"
+        ]
+    }
+}

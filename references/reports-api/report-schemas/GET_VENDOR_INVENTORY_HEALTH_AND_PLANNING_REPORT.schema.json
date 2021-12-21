@@ -1,0 +1,294 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportSummary": {
+            "type": "object",
+            "properties": {
+                "reportingDateRange": {
+                    "type": "object",
+                    "properties": {
+                        "reportingDateFrom": {
+                            "type": "string"
+                        },
+                        "reportingDateTo": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportingDateFrom",
+                        "reportingDateTo"
+                    ]
+                },
+                "distributorView": {
+                    "type": "string"
+                },
+                "currencyCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "currencyCode",
+                "distributorView",
+                "reportingDateRange"
+            ]
+        },
+        "reportDetails": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sellingProgramName": {
+                        "type": "string"
+                    },
+                    "inventoryHealthMetricsByProgram": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "asin": {
+                                    "type": "string"
+                                },
+                                "inventoryHealthMetricsByAsin": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "reportingDate": {
+                                                "type": "string"
+                                            },
+                                            "inventoryHealthMetricsByDate": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "netReceivedAmount": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "netReceivedUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "openPurchaseOrderQuantity": {
+                                                        "type": "integer"
+                                                    },
+                                                    "sellThroughRate": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    },
+                                                    "sellableOnHandInventory": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "sellableOnHandAmountTrailing30DayAverage": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "sellableOnHandUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "unsellableOnHandInventory": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "unsellableOnHandAmountTrailing30DayAverage": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "unsellableOnHandUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "aged90PlusDaysSellableInventory": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "aged90PlusDaysSellableAmountTrailing30DayAverage": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "aged90PlusDaysSellableUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "unhealthyInventory": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "unhealthyUnitsTrailing30DayAverage": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    },
+                                                    "unhealthyUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "unfilledCustomerOrderedUnits": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "availableUnits": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "weeksOnHand": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "receiveFillRate": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    },
+                                                    "overallVendorLeadTime": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "aged90PlusDaysSellableAmountTrailing30DayAverage",
+                                                    "aged90PlusDaysSellableInventory",
+                                                    "aged90PlusDaysSellableUnits",
+                                                    "availableUnits",
+                                                    "netReceivedAmount",
+                                                    "netReceivedUnits",
+                                                    "openPurchaseOrderQuantity",
+                                                    "overallVendorLeadTime",
+                                                    "receiveFillRate",
+                                                    "sellThroughRate",
+                                                    "sellableOnHandAmountTrailing30DayAverage",
+                                                    "sellableOnHandInventory",
+                                                    "sellableOnHandUnits",
+                                                    "unfilledCustomerOrderedUnits",
+                                                    "unhealthyInventory",
+                                                    "unhealthyUnits",
+                                                    "unhealthyUnitsTrailing30DayAverage",
+                                                    "unsellableOnHandAmountTrailing30DayAverage",
+                                                    "unsellableOnHandInventory",
+                                                    "unsellableOnHandUnits",
+                                                    "weeksOnHand"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "inventoryHealthMetricsByDate",
+                                            "reportingDate"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "asin",
+                                "inventoryHealthMetricsByAsin"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "inventoryHealthMetricsByProgram",
+                    "sellingProgramName"
+                ]
+            }
+        }
+    },
+    "required": [
+        "reportDetails",
+        "reportSummary"
+    ]
+}

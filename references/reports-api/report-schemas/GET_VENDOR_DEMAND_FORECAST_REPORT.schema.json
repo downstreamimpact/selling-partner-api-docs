@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportSummary": {
+            "type": "object",
+            "properties": {
+                "reportingDateRange": {
+                    "type": "object",
+                    "properties": {
+                        "reportingDateFrom": {
+                            "type": "string"
+                        },
+                        "reportingDateTo": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportingDateFrom",
+                        "reportingDateTo"
+                    ]
+                },
+                "distributorView": {
+                    "type": "string"
+                },
+                "currencyCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "currencyCode",
+                "distributorView",
+                "reportingDateRange"
+            ]
+        },
+        "reportDetails": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sellingProgramName": {
+                        "type": "string"
+                    },
+                    "demandForecastByProgram": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "asin": {
+                                    "type": "string"
+                                },
+                                "demandForecastByAsin": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "creationDate": {
+                                                "type": "string"
+                                            },
+                                            "demandForecastByCreationDate": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "demandForecastType": {
+                                                            "type": "string"
+                                                        },
+                                                        "demandUnitsByWeek": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "relativeWeek": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "demandUnits": {
+                                                                        "type": [
+                                                                            "integer",
+                                                                            "null"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "demandUnits",
+                                                                    "relativeWeek"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "demandForecastType",
+                                                        "demandUnitsByWeek"
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "creationDate",
+                                            "demandForecastByCreationDate"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "asin",
+                                "demandForecastByAsin"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "demandForecastByProgram",
+                    "sellingProgramName"
+                ]
+            }
+        }
+    },
+    "required": [
+        "reportDetails",
+        "reportSummary"
+    ]
+}

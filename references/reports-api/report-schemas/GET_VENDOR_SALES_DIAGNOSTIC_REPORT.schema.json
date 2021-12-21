@@ -1,0 +1,242 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportSummary": {
+            "type": "object",
+            "properties": {
+                "reportingDateRange": {
+                    "type": "object",
+                    "properties": {
+                        "reportingDateFrom": {
+                            "type": "string"
+                        },
+                        "reportingDateTo": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportingDateFrom",
+                        "reportingDateTo"
+                    ]
+                },
+                "distributorView": {
+                    "type": "string"
+                },
+                "currencyCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "currencyCode",
+                "distributorView",
+                "reportingDateRange"
+            ]
+        },
+        "reportDetails": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sellingProgramName": {
+                        "type": "string"
+                    },
+                    "salesMetricsByProgram": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "asin": {
+                                    "type": "string"
+                                },
+                                "salesMetricsByAsin": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "reportingDate": {
+                                                "type": "string"
+                                            },
+                                            "salesMetricsByDate": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "shippedRevenue": {
+                                                        "anyOf": [
+                                                            {
+                                                                "type": "null"
+                                                            },
+                                                            {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "amount": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "currencyCode": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "amount",
+                                                                    "currencyCode"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "shippedCOGS": {
+                                                        "anyOf": [
+                                                            {
+                                                                "type": "null"
+                                                            },
+                                                            {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "amount": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "currencyCode": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "amount",
+                                                                    "currencyCode"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "shippedUnits": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "customerReturns": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "freeReplacements": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "preOrderedRevenue": {
+                                                        "anyOf": [
+                                                            {
+                                                                "type": "null"
+                                                            },
+                                                            {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "amount": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "currencyCode": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "amount",
+                                                                    "currencyCode"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "orderedRevenue": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "amount": {
+                                                                "type": "number"
+                                                            },
+                                                            "currencyCode": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount",
+                                                            "currencyCode"
+                                                        ]
+                                                    },
+                                                    "orderedUnits": {
+                                                        "type": "integer"
+                                                    },
+                                                    "preOrderedUnits": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "shippedSubcategorySalesRank": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "orderedSubcategorySalesRank": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "replenishableOutOfStock": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    },
+                                                    "lostBuyBox": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    },
+                                                    "glanceViews": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "conversionRate": {
+                                                        "type": [
+                                                            "null",
+                                                            "number"
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "customerReturns",
+                                                    "freeReplacements",
+                                                    "shippedCOGS",
+                                                    "shippedRevenue",
+                                                    "shippedUnits"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "reportingDate",
+                                            "salesMetricsByDate"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "asin",
+                                "salesMetricsByAsin"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "salesMetricsByProgram",
+                    "sellingProgramName"
+                ]
+            }
+        }
+    },
+    "required": [
+        "reportDetails",
+        "reportSummary"
+    ]
+}
