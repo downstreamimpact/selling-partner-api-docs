@@ -4,9 +4,85 @@
     "properties": {
         "reportRequestError": {
             "type": "string"
+        },
+        "reportSpecification": {
+            "type": "object",
+            "properties": {
+                "dataStartTime": {
+                    "type": "string"
+                },
+                "dataEndTime": {
+                    "type": "string"
+                },
+                "marketplaceIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "reportOptions": {
+                    "type": "object",
+                    "properties": {
+                        "reportPeriod": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportPeriod"
+                    ]
+                },
+                "reportType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dataEndTime",
+                "dataStartTime",
+                "marketplaceIds",
+                "reportOptions",
+                "reportType"
+            ]
+        },
+        "dataByDepartmentAndSearchTerm": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "departmentName": {
+                        "type": "string"
+                    },
+                    "searchTerm": {
+                        "type": "string"
+                    },
+                    "searchFrequencyRank": {
+                        "type": "integer"
+                    },
+                    "clickedAsin": {
+                        "type": "string"
+                    },
+                    "clickShareRank": {
+                        "type": "integer"
+                    },
+                    "clickShare": {
+                        "type": "number"
+                    },
+                    "conversionShare": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                },
+                "required": [
+                    "clickShare",
+                    "clickShareRank",
+                    "clickedAsin",
+                    "conversionShare",
+                    "departmentName",
+                    "searchFrequencyRank",
+                    "searchTerm"
+                ]
+            }
         }
-    },
-    "required": [
-        "reportRequestError"
-    ]
+    }
 }

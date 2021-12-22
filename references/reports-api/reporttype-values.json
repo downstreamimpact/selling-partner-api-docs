@@ -28,6 +28,9 @@
       },
       "GET_VENDOR_DEMAND_FORECAST_REPORT": {
         "file_format": "json"
+      },
+      "GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT": {
+        "file_format": "json"
       }
     }
   ],
