@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="sellerPerformanceReports">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="sellerPerformanceReport" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="performanceChecklist" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="orderDefectRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="orderCancellationRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="lateShipmentRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="policyViolation" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="onTimeDelivery" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="validTrackingRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="contactResponseTime" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="returnDissatisfactionRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="customerServiceDissatisfactionRate" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="productAuthenticityStatus" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="productSafetyStatus" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="listingPolicyStatus" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="intellectualPropertyStatus" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="status" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="orderDefects" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="orderDefectMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="orderCount" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="orderWithDefects" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="negativeFeedbacks" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="a_z_claims" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="chargebacks" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="customerExperience" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="customerExperienceMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="orderCount" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="lateShipment" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="preFulfillmentCancellation" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="refunds" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="trackingInformation" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="trackingMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="requiredCategories" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="validTracking" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="onTimeDelivery" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="buyerSellerContactResponseTimeMetrics" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="responseTimeMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="averageResponseTimeInHours" minOccurs="0" type="xsd:decimal"/>
+                                                    <xsd:element name="responseUnder24Hours" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="responseTimeGreaterThan24Hours" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="noResponseForContactsOlderThan24Hours" minOccurs="0" type="xsd:int"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="customerService" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="customerServiceMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="customerServiceDissatisfaction" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="returnDissatisfaction" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="returnDissatisfactionMetrics" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="timeFrame" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                                <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="returnOrderCount" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="returnDissatisfaction" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="negativeReturnFeedback" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="lateResponse" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="invalidRejection" minOccurs="0">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="rate" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="count" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="productAuthenticityData" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="timeFrame" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                    <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="defectCount" minOccurs="0" type="xsd:int"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="productSafetyData" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="timeFrame" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                    <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="defectCount" minOccurs="0" type="xsd:int"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="listingPolicyData" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="timeFrame" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                    <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="defectCount" minOccurs="0" type="xsd:int"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="intellectualPropertyData" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="timeFrame" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="start" minOccurs="0" type="xsd:dateTime"/>
+                                                    <xsd:element name="end" minOccurs="0" type="xsd:dateTime"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="defectCount" minOccurs="0" type="xsd:int"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
