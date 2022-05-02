@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "reportPeriod": {
+              "type": "string"
+            },
+            "sellingProgram": {
+              "type": "string"
+            },
+            "distributorView": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "distributorView",
+            "reportPeriod",
+            "sellingProgram"
+          ]
+        },
+        "dataStartTime": {
+          "type": "string"
+        },
+        "dataEndTime": {
+          "type": "string"
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dataEndTime",
+        "dataStartTime",
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "salesAggregate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "customerReturns": {
+            "type": "integer"
+          },
+          "shippedCogs": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "shippedRevenue": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "shippedUnits": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "customerReturns",
+          "endDate",
+          "shippedCogs",
+          "shippedRevenue",
+          "shippedUnits",
+          "startDate"
+        ]
+      }
+    },
+    "salesByAsin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "asin": {
+            "type": "string"
+          },
+          "customerReturns": {
+            "type": "integer"
+          },
+          "shippedCogs": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "shippedRevenue": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "shippedUnits": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "asin",
+          "customerReturns",
+          "endDate",
+          "shippedCogs",
+          "shippedRevenue",
+          "shippedUnits",
+          "startDate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "reportSpecification",
+    "salesAggregate",
+    "salesByAsin"
+  ]
+}

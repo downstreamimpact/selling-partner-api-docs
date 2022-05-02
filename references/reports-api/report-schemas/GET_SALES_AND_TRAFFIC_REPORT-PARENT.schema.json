@@ -1,0 +1,457 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "dateGranularity": {
+              "type": "string"
+            },
+            "asinGranularity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "asinGranularity",
+            "dateGranularity"
+          ]
+        },
+        "dataStartTime": {
+          "type": "string"
+        },
+        "dataEndTime": {
+          "type": "string"
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dataEndTime",
+        "dataStartTime",
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "salesAndTrafficByDate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "salesByDate": {
+            "type": "object",
+            "properties": {
+              "orderedProductSales": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "orderedProductSalesB2B": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "unitsOrdered": {
+                "type": "integer"
+              },
+              "unitsOrderedB2B": {
+                "type": "integer"
+              },
+              "totalOrderItems": {
+                "type": "integer"
+              },
+              "totalOrderItemsB2B": {
+                "type": "integer"
+              },
+              "averageSalesPerOrderItem": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "averageSalesPerOrderItemB2B": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "averageUnitsPerOrderItem": {
+                "type": "number"
+              },
+              "averageUnitsPerOrderItemB2B": {
+                "type": "number"
+              },
+              "averageSellingPrice": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "averageSellingPriceB2B": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "unitsRefunded": {
+                "type": "integer"
+              },
+              "refundRate": {
+                "type": "number"
+              },
+              "claimsGranted": {
+                "type": "integer"
+              },
+              "claimsAmount": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "shippedProductSales": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "unitsShipped": {
+                "type": "integer"
+              },
+              "ordersShipped": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "averageSalesPerOrderItem",
+              "averageSalesPerOrderItemB2B",
+              "averageSellingPrice",
+              "averageSellingPriceB2B",
+              "averageUnitsPerOrderItem",
+              "averageUnitsPerOrderItemB2B",
+              "claimsAmount",
+              "claimsGranted",
+              "orderedProductSales",
+              "orderedProductSalesB2B",
+              "ordersShipped",
+              "refundRate",
+              "shippedProductSales",
+              "totalOrderItems",
+              "totalOrderItemsB2B",
+              "unitsOrdered",
+              "unitsOrderedB2B",
+              "unitsRefunded",
+              "unitsShipped"
+            ]
+          },
+          "trafficByDate": {
+            "type": "object",
+            "properties": {
+              "browserPageViews": {
+                "type": "integer"
+              },
+              "mobileAppPageViews": {
+                "type": "integer"
+              },
+              "pageViews": {
+                "type": "integer"
+              },
+              "browserSessions": {
+                "type": "integer"
+              },
+              "mobileAppSessions": {
+                "type": "integer"
+              },
+              "sessions": {
+                "type": "integer"
+              },
+              "buyBoxPercentage": {
+                "type": "number"
+              },
+              "orderItemSessionPercentage": {
+                "type": "number"
+              },
+              "orderItemSessionPercentageB2B": {
+                "type": "number"
+              },
+              "unitSessionPercentage": {
+                "type": "number"
+              },
+              "unitSessionPercentageB2B": {
+                "type": "number"
+              },
+              "averageOfferCount": {
+                "type": "integer"
+              },
+              "averageParentItems": {
+                "type": "integer"
+              },
+              "feedbackReceived": {
+                "type": "integer"
+              },
+              "negativeFeedbackReceived": {
+                "type": "integer"
+              },
+              "receivedNegativeFeedbackRate": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "averageOfferCount",
+              "averageParentItems",
+              "browserPageViews",
+              "browserSessions",
+              "buyBoxPercentage",
+              "feedbackReceived",
+              "mobileAppPageViews",
+              "mobileAppSessions",
+              "negativeFeedbackReceived",
+              "orderItemSessionPercentage",
+              "orderItemSessionPercentageB2B",
+              "pageViews",
+              "receivedNegativeFeedbackRate",
+              "sessions",
+              "unitSessionPercentage",
+              "unitSessionPercentageB2B"
+            ]
+          }
+        },
+        "required": [
+          "date",
+          "salesByDate",
+          "trafficByDate"
+        ]
+      }
+    },
+    "salesAndTrafficByAsin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parentAsin": {
+            "type": "string"
+          },
+          "salesByAsin": {
+            "type": "object",
+            "properties": {
+              "unitsOrdered": {
+                "type": "integer"
+              },
+              "unitsOrderedB2B": {
+                "type": "integer"
+              },
+              "orderedProductSales": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "orderedProductSalesB2B": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              },
+              "totalOrderItems": {
+                "type": "integer"
+              },
+              "totalOrderItemsB2B": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "orderedProductSales",
+              "orderedProductSalesB2B",
+              "totalOrderItems",
+              "totalOrderItemsB2B",
+              "unitsOrdered",
+              "unitsOrderedB2B"
+            ]
+          },
+          "trafficByAsin": {
+            "type": "object",
+            "properties": {
+              "browserSessions": {
+                "type": "integer"
+              },
+              "mobileAppSessions": {
+                "type": "integer"
+              },
+              "sessions": {
+                "type": "integer"
+              },
+              "browserSessionPercentage": {
+                "type": "number"
+              },
+              "mobileAppSessionPercentage": {
+                "type": "number"
+              },
+              "sessionPercentage": {
+                "type": "number"
+              },
+              "browserPageViews": {
+                "type": "integer"
+              },
+              "mobileAppPageViews": {
+                "type": "integer"
+              },
+              "pageViews": {
+                "type": "integer"
+              },
+              "browserPageViewsPercentage": {
+                "type": "number"
+              },
+              "mobileAppPageViewsPercentage": {
+                "type": "number"
+              },
+              "pageViewsPercentage": {
+                "type": "number"
+              },
+              "buyBoxPercentage": {
+                "type": "number"
+              },
+              "unitSessionPercentage": {
+                "type": "number"
+              },
+              "unitSessionPercentageB2B": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "browserPageViews",
+              "browserPageViewsPercentage",
+              "browserSessionPercentage",
+              "browserSessions",
+              "buyBoxPercentage",
+              "mobileAppPageViews",
+              "mobileAppPageViewsPercentage",
+              "mobileAppSessionPercentage",
+              "mobileAppSessions",
+              "pageViews",
+              "pageViewsPercentage",
+              "sessionPercentage",
+              "sessions",
+              "unitSessionPercentage",
+              "unitSessionPercentageB2B"
+            ]
+          }
+        },
+        "required": [
+          "parentAsin",
+          "salesByAsin",
+          "trafficByAsin"
+        ]
+      }
+    }
+  },
+  "required": [
+    "reportSpecification",
+    "salesAndTrafficByAsin",
+    "salesAndTrafficByDate"
+  ]
+}
