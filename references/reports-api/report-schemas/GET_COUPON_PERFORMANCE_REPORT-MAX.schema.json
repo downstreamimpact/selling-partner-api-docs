@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "campaignStartDateFrom": {
+              "type": "string"
+            },
+            "campaignStartDateTo": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "campaignStartDateFrom",
+            "campaignStartDateTo"
+          ]
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "campaigns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "campaignId": {
+            "type": "string"
+          },
+          "campaignName": {
+            "type": "string"
+          },
+          "vendorCode": {
+            "type": "string"
+          },
+          "marketplaceId": {
+            "type": "string"
+          },
+          "creationDateTime": {
+            "type": "string"
+          },
+          "lastUpdatedDateTime": {
+            "type": "string"
+          },
+          "isSubscribeAndSave": {
+            "type": "boolean"
+          },
+          "budgetType": {
+            "type": "string"
+          },
+          "totalClips": {
+            "type": "integer"
+          },
+          "totalRedemptions": {
+            "type": "integer"
+          },
+          "currencyCode": {
+            "type": "string"
+          },
+          "coupons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "couponId": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "websiteMessage": {
+                  "type": "string"
+                },
+                "startDateTime": {
+                  "type": "string"
+                },
+                "endDateTime": {
+                  "type": "string"
+                },
+                "isOncePerCustomer": {
+                  "type": "boolean"
+                },
+                "clips": {
+                  "type": "integer"
+                },
+                "redemptions": {
+                  "type": "integer"
+                },
+                "budget": {
+                  "type": "number"
+                },
+                "totalDiscount": {
+                  "type": "number"
+                },
+                "budgetSpent": {
+                  "type": "number"
+                },
+                "budgetRemaining": {
+                  "type": "number"
+                },
+                "budgetPercentageUsed": {
+                  "type": "number"
+                },
+                "asins": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "asin": {
+                        "type": "string"
+                      },
+                      "discountType": {
+                        "type": "string"
+                      },
+                      "discountAmount": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "asin",
+                      "discountAmount",
+                      "discountType"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "asins",
+                "budget",
+                "budgetPercentageUsed",
+                "budgetRemaining",
+                "budgetSpent",
+                "clips",
+                "couponId",
+                "endDateTime",
+                "isOncePerCustomer",
+                "name",
+                "redemptions",
+                "startDateTime",
+                "totalDiscount",
+                "websiteMessage"
+              ]
+            }
+          }
+        },
+        "required": [
+          "budgetType",
+          "campaignId",
+          "campaignName",
+          "coupons",
+          "creationDateTime",
+          "currencyCode",
+          "isSubscribeAndSave",
+          "lastUpdatedDateTime",
+          "marketplaceId",
+          "totalClips",
+          "totalRedemptions",
+          "vendorCode"
+        ]
+      }
+    }
+  },
+  "required": [
+    "campaigns",
+    "reportSpecification"
+  ]
+}
