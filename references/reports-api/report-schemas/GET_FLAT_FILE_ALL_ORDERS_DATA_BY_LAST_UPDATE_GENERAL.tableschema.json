@@ -1,0 +1,162 @@
+{
+    "fields": [
+        {
+            "name": "amazon-order-id",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "merchant-order-id",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "purchase-date",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "last-updated-date",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "order-status",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "fulfillment-channel",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "sales-channel",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "order-channel",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "ship-service-level",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "product-name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "sku",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-status",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "quantity",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "currency",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-price",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "item-tax",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "shipping-price",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "shipping-tax",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "gift-wrap-price",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "gift-wrap-tax",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-promotion-discount",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "ship-promotion-discount",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "ship-city",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "ship-state",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "ship-postal-code",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "ship-country",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "promotion-ids",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "is-business-order",
+            "type": "boolean",
+            "format": "default"
+        },
+        {
+            "name": "purchase-order-number",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "price-designation",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}
