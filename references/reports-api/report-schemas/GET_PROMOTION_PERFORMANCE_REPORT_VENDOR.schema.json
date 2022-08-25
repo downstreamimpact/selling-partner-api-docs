@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "promotionStartDateFrom": {
+              "type": "string"
+            },
+            "promotionStartDateTo": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "promotionStartDateFrom",
+            "promotionStartDateTo"
+          ]
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "promotions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "promotionId": {
+            "type": "string"
+          },
+          "promotionName": {
+            "type": "string"
+          },
+          "vendorCode": {
+            "type": "string"
+          },
+          "unitsSold": {
+            "type": "integer"
+          },
+          "amountSpent": {
+            "type": "number"
+          },
+          "amountSpentCurrencyCode": {
+            "type": "string"
+          },
+          "revenue": {
+            "type": "number"
+          },
+          "revenueCurrencyCode": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "marketplaceId": {
+            "type": "string"
+          },
+          "fundingAgreementId": {
+            "type": "string"
+          },
+          "glanceViews": {
+            "type": "integer"
+          },
+          "startDateTime": {
+            "type": "string"
+          },
+          "endDateTime": {
+            "type": "string"
+          },
+          "createdDateTime": {
+            "type": "string"
+          },
+          "lastUpdatedDateTime": {
+            "type": "string"
+          },
+          "includedProducts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "asin": {
+                  "type": "string"
+                },
+                "productName": {
+                  "type": "string"
+                },
+                "productGlanceViews": {
+                  "type": "integer"
+                },
+                "productUnitsSold": {
+                  "type": "integer"
+                },
+                "productAmountSpent": {
+                  "type": "number"
+                },
+                "productAmountSpentCurrencyCode": {
+                  "type": "string"
+                },
+                "productRevenue": {
+                  "type": "number"
+                },
+                "productRevenueCurrencyCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "asin",
+                "productAmountSpent",
+                "productAmountSpentCurrencyCode",
+                "productGlanceViews",
+                "productName",
+                "productRevenue",
+                "productRevenueCurrencyCode",
+                "productUnitsSold"
+              ]
+            }
+          }
+        },
+        "required": [
+          "amountSpent",
+          "amountSpentCurrencyCode",
+          "createdDateTime",
+          "endDateTime",
+          "fundingAgreementId",
+          "glanceViews",
+          "includedProducts",
+          "lastUpdatedDateTime",
+          "marketplaceId",
+          "promotionId",
+          "promotionName",
+          "revenue",
+          "revenueCurrencyCode",
+          "startDateTime",
+          "status",
+          "type",
+          "unitsSold",
+          "vendorCode"
+        ]
+      }
+    }
+  },
+  "required": [
+    "promotions",
+    "reportSpecification"
+  ]
+}

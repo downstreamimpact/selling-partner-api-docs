@@ -1,0 +1,122 @@
+{
+    "fields": [
+        {
+            "name": "sku",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "price",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "quantity",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "Business Price",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price Type",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Lower Bound 1",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price 1",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Lower Bound 2",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price 2",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Lower Bound 3",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price 3",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Lower Bound 4",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price 4",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Lower Bound 5",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Quantity Price 5",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Price Type",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Lower Bound 1",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Price 1",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Lower Bound 2",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Price 2",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Lower Bound 3",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "Progressive Price 3",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "sellingProgram": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sellingProgram"
+          ]
+        },
+        "dataStartTime": {
+          "type": "null"
+        },
+        "dataEndTime": {
+          "type": "null"
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dataEndTime",
+        "dataStartTime",
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "forecastByAsin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "forecastGenerationDate": {
+            "type": "string"
+          },
+          "asin": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "meanForecastUnits": {
+            "type": "integer"
+          },
+          "p70ForecastUnits": {
+            "type": "integer"
+          },
+          "p80ForecastUnits": {
+            "type": "integer"
+          },
+          "p90ForecastUnits": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "asin",
+          "endDate",
+          "forecastGenerationDate",
+          "meanForecastUnits",
+          "p70ForecastUnits",
+          "p80ForecastUnits",
+          "p90ForecastUnits",
+          "startDate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "forecastByAsin",
+    "reportSpecification"
+  ]
+}

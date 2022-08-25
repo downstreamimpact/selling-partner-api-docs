@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "name": "seller-sku",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "quantity",
+            "type": "integer",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

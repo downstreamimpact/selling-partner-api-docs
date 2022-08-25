@@ -1,0 +1,57 @@
+{
+    "fields": [
+        {
+            "name": "sku",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "product-name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "field-name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "alert-type",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "current-value",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "last-updated",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "alert-name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "status",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "explanation",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

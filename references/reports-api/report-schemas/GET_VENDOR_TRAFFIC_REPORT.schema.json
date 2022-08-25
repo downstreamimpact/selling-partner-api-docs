@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "reportPeriod": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "reportPeriod"
+          ]
+        },
+        "dataStartTime": {
+          "type": "string"
+        },
+        "dataEndTime": {
+          "type": "string"
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dataEndTime",
+        "dataStartTime",
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "trafficAggregate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "glanceViews": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "endDate",
+          "glanceViews",
+          "startDate"
+        ]
+      }
+    },
+    "trafficByAsin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "asin": {
+            "type": "string"
+          },
+          "glanceViews": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "asin",
+          "endDate",
+          "glanceViews",
+          "startDate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "reportSpecification",
+    "trafficAggregate",
+    "trafficByAsin"
+  ]
+}

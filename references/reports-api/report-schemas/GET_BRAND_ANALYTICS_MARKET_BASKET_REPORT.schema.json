@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportRequestError": {
+            "type": "string"
+        },
+        "reportSpecification": {
+            "type": "object",
+            "properties": {
+                "dataStartTime": {
+                    "type": "string"
+                },
+                "dataEndTime": {
+                    "type": "string"
+                },
+                "marketplaceIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "reportOptions": {
+                    "type": "object",
+                    "properties": {
+                        "reportPeriod": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportPeriod"
+                    ]
+                },
+                "reportType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dataEndTime",
+                "dataStartTime",
+                "marketplaceIds",
+                "reportOptions",
+                "reportType"
+            ]
+        },
+        "dataByAsin": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "asin": {
+                        "type": "string"
+                    },
+                    "purchasedWithAsin": {
+                        "type": "string"
+                    },
+                    "purchasedWithRank": {
+                        "type": "integer"
+                    },
+                    "combinationPct": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "asin",
+                    "combinationPct",
+                    "endDate",
+                    "purchasedWithAsin",
+                    "purchasedWithRank",
+                    "startDate"
+                ]
+            }
+        }
+    }
+}

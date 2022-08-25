@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportRequestError": {
+            "type": "string"
+        },
+        "reportSpecification": {
+            "type": "object",
+            "properties": {
+                "dataStartTime": {
+                    "type": "string"
+                },
+                "dataEndTime": {
+                    "type": "string"
+                },
+                "marketplaceIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "reportOptions": {
+                    "type": "object",
+                    "properties": {
+                        "reportPeriod": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportPeriod"
+                    ]
+                },
+                "reportType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dataEndTime",
+                "dataStartTime",
+                "marketplaceIds",
+                "reportOptions",
+                "reportType"
+            ]
+        },
+        "dataByAsin": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "asin": {
+                        "type": "string"
+                    },
+                    "orders": {
+                        "type": "integer"
+                    },
+                    "uniqueCustomers": {
+                        "type": "integer"
+                    },
+                    "repeatCustomersPctTotal": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "repeatPurchaseRevenue": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "number"
+                            },
+                            "currencyCode": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "amount",
+                            "currencyCode"
+                        ]
+                    },
+                    "repeatPurchaseRevenuePctTotal": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                },
+                "required": [
+                    "asin",
+                    "endDate",
+                    "orders",
+                    "repeatCustomersPctTotal",
+                    "repeatPurchaseRevenue",
+                    "repeatPurchaseRevenuePctTotal",
+                    "startDate",
+                    "uniqueCustomers"
+                ]
+            }
+        }
+    }
+}

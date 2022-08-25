@@ -1,0 +1,152 @@
+{
+    "fields": [
+        {
+            "name": "item-name",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-description",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "listing-id",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "seller-sku",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "price",
+            "type": "number",
+            "format": "default"
+        },
+        {
+            "name": "quantity",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "open-date",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "image-url",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-is-marketplace",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "product-id-type",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "zshop-shipping-fee",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-note",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "item-condition",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "zshop-category1",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "zshop-browse-path",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "zshop-storefront-feature",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin1",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin2",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "asin3",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "will-ship-internationally",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "expedited-shipping",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "zshop-boldface",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "product-id",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "bid-for-featured-placement",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "add-delete",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "pending-quantity",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "fulfillment-channel",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "merchant-shipping-group",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "status",
+            "type": "string",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Result">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="Node" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="browseNodeId" minOccurs="0" type="xsd:long"/>
+                            <xsd:element name="browseNodeAttributes" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:simpleContent>
+                                        <xsd:extension base="xsd:string">
+                                            <xsd:attribute name="count" type="xsd:int" use="required"/>
+                                        </xsd:extension>
+                                    </xsd:simpleContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="browseNodeName" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="browseNodeStoreContextName" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="browsePathById" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="browsePathByName" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="hasChildren" minOccurs="0" type="xsd:boolean"/>
+                            <xsd:element name="childNodes" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:simpleContent>
+                                        <xsd:extension base="xsd:string">
+                                            <xsd:attribute name="count" type="xsd:int" use="required"/>
+                                        </xsd:extension>
+                                    </xsd:simpleContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="productTypeDefinitions" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="refinementsInformation" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:simpleContent>
+                                        <xsd:extension base="xsd:string">
+                                            <xsd:attribute name="count" type="xsd:int" use="required"/>
+                                        </xsd:extension>
+                                    </xsd:simpleContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

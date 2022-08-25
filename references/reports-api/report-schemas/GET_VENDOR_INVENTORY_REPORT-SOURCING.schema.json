@@ -1,0 +1,372 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reportSpecification": {
+      "type": "object",
+      "properties": {
+        "reportType": {
+          "type": "string"
+        },
+        "reportOptions": {
+          "type": "object",
+          "properties": {
+            "reportPeriod": {
+              "type": "string"
+            },
+            "sellingProgram": {
+              "type": "string"
+            },
+            "distributorView": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "distributorView",
+            "reportPeriod",
+            "sellingProgram"
+          ]
+        },
+        "dataStartTime": {
+          "type": "string"
+        },
+        "dataEndTime": {
+          "type": "string"
+        },
+        "marketplaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dataEndTime",
+        "dataStartTime",
+        "marketplaceIds",
+        "reportOptions",
+        "reportType"
+      ]
+    },
+    "inventoryAggregate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "openPurchaseOrderUnits": {
+            "type": "integer"
+          },
+          "averageVendorLeadTimeDays": {
+            "type": "number"
+          },
+          "sellThroughRate": {
+            "type": "number"
+          },
+          "unfilledCustomerOrderedUnits": {
+            "type": "null"
+          },
+          "netReceivedInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "netReceivedInventoryUnits": {
+            "type": "integer"
+          },
+          "sellableOnHandInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "sellableOnHandInventoryUnits": {
+            "type": "integer"
+          },
+          "unsellableOnHandInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "unsellableOnHandInventoryUnits": {
+            "type": "integer"
+          },
+          "aged90PlusDaysSellableInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "aged90PlusDaysSellableInventoryUnits": {
+            "type": "integer"
+          },
+          "unhealthyInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "unhealthyInventoryUnits": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "aged90PlusDaysSellableInventoryCost",
+          "aged90PlusDaysSellableInventoryUnits",
+          "averageVendorLeadTimeDays",
+          "endDate",
+          "netReceivedInventoryCost",
+          "netReceivedInventoryUnits",
+          "openPurchaseOrderUnits",
+          "sellThroughRate",
+          "sellableOnHandInventoryCost",
+          "sellableOnHandInventoryUnits",
+          "startDate",
+          "unfilledCustomerOrderedUnits",
+          "unhealthyInventoryCost",
+          "unhealthyInventoryUnits",
+          "unsellableOnHandInventoryCost",
+          "unsellableOnHandInventoryUnits"
+        ]
+      }
+    },
+    "inventoryByAsin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "asin": {
+            "type": "string"
+          },
+          "openPurchaseOrderUnits": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "averageVendorLeadTimeDays": {
+            "type": "number"
+          },
+          "sellThroughRate": {
+            "type": "number"
+          },
+          "unfilledCustomerOrderedUnits": {
+            "type": "null"
+          },
+          "netReceivedInventoryCost": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currencyCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currencyCode"
+            ]
+          },
+          "netReceivedInventoryUnits": {
+            "type": "integer"
+          },
+          "sellableOnHandInventoryCost": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              }
+            ]
+          },
+          "sellableOnHandInventoryUnits": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "unsellableOnHandInventoryCost": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              }
+            ]
+          },
+          "unsellableOnHandInventoryUnits": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "aged90PlusDaysSellableInventoryCost": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              }
+            ]
+          },
+          "aged90PlusDaysSellableInventoryUnits": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "unhealthyInventoryCost": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currencyCode"
+                ]
+              }
+            ]
+          },
+          "unhealthyInventoryUnits": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "aged90PlusDaysSellableInventoryCost",
+          "aged90PlusDaysSellableInventoryUnits",
+          "asin",
+          "averageVendorLeadTimeDays",
+          "endDate",
+          "netReceivedInventoryCost",
+          "netReceivedInventoryUnits",
+          "openPurchaseOrderUnits",
+          "sellThroughRate",
+          "sellableOnHandInventoryCost",
+          "sellableOnHandInventoryUnits",
+          "startDate",
+          "unfilledCustomerOrderedUnits",
+          "unhealthyInventoryCost",
+          "unhealthyInventoryUnits",
+          "unsellableOnHandInventoryCost",
+          "unsellableOnHandInventoryUnits"
+        ]
+      }
+    }
+  },
+  "required": [
+    "inventoryAggregate",
+    "inventoryByAsin",
+    "reportSpecification"
+  ]
+}

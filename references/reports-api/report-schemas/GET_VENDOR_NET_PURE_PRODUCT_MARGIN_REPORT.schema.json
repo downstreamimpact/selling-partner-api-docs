@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "reportSpecification": {
+            "type": "object",
+            "properties": {
+                "reportType": {
+                    "type": "string"
+                },
+                "reportOptions": {
+                    "type": "object",
+                    "properties": {
+                        "reportPeriod": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "reportPeriod"
+                    ]
+                },
+                "dataStartTime": {
+                    "type": "string"
+                },
+                "dataEndTime": {
+                    "type": "string"
+                },
+                "marketplaceIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "dataEndTime",
+                "dataStartTime",
+                "marketplaceIds",
+                "reportOptions",
+                "reportType"
+            ]
+        },
+        "netPureProductMarginAggregate": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "netPureProductMargin": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "endDate",
+                    "netPureProductMargin",
+                    "startDate"
+                ]
+            }
+        },
+        "netPureProductMarginByAsin": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "asin": {
+                        "type": "string"
+                    },
+                    "netPureProductMargin": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "asin",
+                    "endDate",
+                    "netPureProductMargin",
+                    "startDate"
+                ]
+            }
+        },
+        "errorDetails": {
+            "type": "string"
+        }
+    }
+}

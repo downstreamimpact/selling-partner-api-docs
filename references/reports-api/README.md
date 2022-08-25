@@ -1,0 +1,49 @@
+# reportType values analysis tools
+
+Tools to parse [reportype-values.md] file and extract programmer friendly data.
+
+## Prerequisites
+
+Tools installed
+
+* grep
+* sed
+* yq
+* python 3+
+
+## Process
+
+First get stats of `reportype-values.md`
+
+    > ./reporttype-stats.sh
+    category count: 16
+    reportType count: 105
+    total count: 121
+
+Extract YAML from `reportype-values.md` into `reporttype-values.yaml`
+
+    > ./extract-reporttype-values-yaml.sh > reporttype-values.yaml
+
+Extract JSON from `reporttype-values.yaml` into `reporttype-values.json`
+
+    > ./extract-reporttype-values-json.sh
+
+There you get stats of `reportype-values.json`
+
+    > cat reporttype-values.json | python reporttype-stats.py
+    category count: 16
+    reportType count (by category): 105
+    reportType count (by reportType): 101
+    file_format count: [('tsv', 71), ('xml', 14), ('json', 10), ('csv', 5), ('unknown', 2), ('xlsx', 2), ('pdf', 1)]
+    reports with unknown file_format:  ['GET_CONVERGED_FLAT_FILE_PENDING_ORDERS_DATA', 'GET_V2_SELLER_PERFORMANCE_REPORT']
+
+and check the results agains the results of `./reporttype-stats.sh`
+
+## TODO
+
+Parse:
+
+* Integration type: "Can be requested by sellers and vendors.", "For Seller Central sellers only.", "Marketplace and Seller Central sellers.".
+* Requires:
+  * "Requests must include the FIELD in the reportsOptions."
+  * "Available to selling partners who have the Brand Analytics Selling Partner API role and who are registered in Amazon's Brand Registry."
